@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泡泡鸭自助洗车 - 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2EA7FF', // 天蓝
+                        accent: '#FFD400', // 金黄
+                        dark: '#1A1F2E', // 深色文本
+                        light: '#F5F7FA' // 背景
+                    },
+                    borderRadius: {
+                        'full': '9999px',
+                        'bubble': '32px' // 大卡片圆角
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light p-4 font-sans text-dark min-h-screen">
+
+    <header class="flex items-center gap-4 mb-8">
+        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center font-bold text-xl shadow-lg transition hover:scale-105">鸭</div>
+        <div>
+            <h1 class="text-2xl font-bold">泡泡鸭自助洗车</h1>
+            <p class="text-sm opacity-60">24H 智能服务 · 扫码即洗</p>
+        </div>
+    </header>
+
+    <a href="control.html" class="block bg-brand text-white p-8 rounded-bubble shadow-xl mb-6 transition hover:shadow-2xl hover:translate-y-[-4px]">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-3">扫码立即启动</h2>
+            <p class="text-lg opacity-80 mb-6">全城通通用，智能一键开启</p>
+            <div class="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto text-4xl shadow-inner">📷</div>
+        </div>
+    </a>
+
+    <div class="bg-white p-4 rounded-full flex items-center justify-around shadow-sm mb-6">
+        <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center text-accent text-2xl">💰</div>
+            <span class="text-xs">会员充值</span>
+        </div>
+        <a href="location.html" class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 bg-light rounded-full flex items-center justify-center text-dark/80 text-2xl">📍</div>
+            <span class="text-xs">附近网点</span>
+        </a>
+        <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 bg-light rounded-full flex items-center justify-center text-dark/80 text-2xl">📋</div>
+            <span class="text-xs">洗车记录</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+            <div class="w-14 h-14 bg-light rounded-full flex items-center justify-center text-dark/80 text-2xl">🎫</div>
+            <span class="text-xs">我的卡券</span>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-bubble shadow-sm mb-8">
+        <h3 class="font-bold mb-4">团购兑换</h3>
+        <div class="flex gap-3">
+            <input type="text" placeholder="输入兑换码" class="flex-1 bg-light px-4 py-3 rounded-full border border-gray-100 focus:outline-none focus:ring-1 focus:ring-brand">
+            <button class="px-6 py-3 bg-dark text-white rounded-full transition hover:bg-black">兑换</button>
+        </div>
+    </div>
+
+</body>
+</html>
